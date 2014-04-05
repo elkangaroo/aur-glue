@@ -1,19 +1,16 @@
 # Maintainer: Alexander Wenzel <elkangaroo@gmail.com>
 pkgname=glue
-pkgver=0.3
+pkgver=0.9.4
 pkgrel=1
 pkgdesc='A simple command line tool to generate CSS sprites'
 arch=('any')
 url='https://github.com/jorgebastida/glue/'
 license=('BSD')
-depends=('python2' 'python2-pillow')
+depends=('python2' 'python2-pillow' 'python2-jinja')
 makedepends=('python2-distribute')
-optdepends=('optipng: optimize the output PNG files')
 options=(!emptydirs)
 source=("https://pypi.python.org/packages/source/g/$pkgname/$pkgname-$pkgver.tar.gz")
-md5sums=('56ea951568a5af3c6a4d0d3a0727cddf')
-#source=("https://github.com/jorgebastida/$pkgname/archive/$pkgver.zip")
-#md5sums=('ce0037ea125824d3b21e56ec69a9dc4e')
+md5sums=('5745f0d57b0b48a01bbf28dcbe60248c')
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
